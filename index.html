@@ -3,42 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Oscura</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
-        
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            max-width: 600px;
-            text-align: center;
-        }
-    </style>
+    <title>Página Oscura Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Bienvenido</h1>
-    <p>Esta es una página web con diseño minimalista de fondo negro y texto blanco.</p>
+    <!-- Toggle de tema -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <div class="toggle-circle"></div>
+    </div>
+
+    <!-- Partículas de fondo -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Contenido principal -->
+    <h1 id="title">BIENVENIDO</h1>
+    <p id="description" class="typing"></p>
+
+    <button class="btn" onclick="changeColor()">¡Haz click aquí!</button>
+
+    <!-- Tarjeta interactiva -->
+    <div class="card" onmouseenter="incrementCounter()">
+        <h3>Contador de Visitas</h3>
+        <div class="counter" id="counter">0</div>
+        <p>Pasa el mouse sobre esta tarjeta para aumentar el contador</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
